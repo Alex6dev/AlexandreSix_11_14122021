@@ -14,16 +14,16 @@ class Header extends Component {
     const Header= styled.header`
       display: flex;
       flex-direction: row;
+      width:100%;
     ` 
     const HeaderImg= styled.img`
       margin: 3rem 0 2rem 5%;
-      width: 211px;
-      height: 68px;
     `     
     const HeaderNav= styled.nav`
       display: flex;
       flex-direction: row;
-      margin: 3.5rem 0 0 65%  ;
+      margin: 3.5rem 0 0 65% ;
+      
     `
 
     const HeaderText=styled.p`
@@ -39,8 +39,8 @@ class Header extends Component {
       color: #FF6060;
     
     `
-    const {lienSoul } = this.props
-   
+    const {lienSoul} = this.props
+    
       return (
     
       <Header>
@@ -50,22 +50,22 @@ class Header extends Component {
           <><HeaderLien to="/">
             <HeaderTextSoul>Accueil</HeaderTextSoul>
           </HeaderLien>
-          <HeaderLien to="/about">
+          <HeaderLien to="about">
             <HeaderText>A Propos</HeaderText>
           </HeaderLien></>
         ):(
-          <><HeaderLien>
+          <><HeaderLien to="/">
             <HeaderText>Accueil</HeaderText>
           </HeaderLien>
-          <HeaderLien>
+          <HeaderLien to="about">
             <HeaderTextSoul>A Propos</HeaderTextSoul>
           </HeaderLien></>
         )
         ):(
-        <><HeaderLien>
-          <HeaderText>Accueil</HeaderText>
+        <><HeaderLien to="/">
+          <HeaderText>Accueil</HeaderText>  
         </HeaderLien>
-        <HeaderLien>
+        <HeaderLien to="about">
           <HeaderText>A Propos</HeaderText>
         </HeaderLien></>
         )}

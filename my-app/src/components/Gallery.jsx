@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-import{Link} from 'react-router-dom'
+import{Link, Outlet} from 'react-router-dom';
+
 
 var tab=[
         {
@@ -185,18 +186,20 @@ class Gallery extends Component {
         position:absolute;
         
     `
+    console.log(tab)
     return ( 
         <GalleryContainer>
             <GalleryListe>  
-                {tab.map((plant)=>(
-                    <GalleryCard key={`${plant.id}`}>
-                        <Link to={`/lodging/${plant.id}`}>
-                            <GalleryCardImg src={plant.cover}/>
-                            <GalleryCardText>{plant.title}</GalleryCardText>
+                {tab.map((loca)=>(
+                    <GalleryCard key={`${loca.id}`}>
+                        <Link to={`location/:${loca.id}`}>
+                            <GalleryCardImg src={loca.cover}/>
+                            <GalleryCardText>{loca.title}</GalleryCardText>
                         </Link>
                     </GalleryCard>
                 ))}
             </GalleryListe>
+            <Outlet/>
         </GalleryContainer>
 
     );
