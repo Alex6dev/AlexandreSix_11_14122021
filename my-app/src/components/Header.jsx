@@ -23,7 +23,6 @@ class Header extends Component {
       display: flex;
       flex-direction: row;
       margin: 3.5rem 0 0 65% ;
-      
     `
 
     const HeaderText=styled.p`

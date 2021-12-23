@@ -45,9 +45,34 @@ let tabDesEqui= [
 class Lodging extends Component {
   constructor(props){
     super(props) 
+    this.state = {
+      error: null,
+      isLoaded: false,
+      dataId: []
+    }
   }
 
+  componentDidMount() {
+    fetch("./data.json")
+        .then((res) => res.json())
+        .then( (result) => {
+            this.setState({
+                isLoaded: true,
+                dataId: result
+            })}, 
+                
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                })
+            }
+        )
+  }
   render(){
+    const{id}= this.props.match.params
+    console.log(id)
+    console.log("slt")
       const LodgingContainer= styled.section`
         display:flex;
         flex-direction:row;
@@ -58,7 +83,7 @@ class Lodging extends Component {
       `   
       const LodgingContainGallery=styled.div`
         width:100%;
-        height:500px;
+        height:450px;
         display:flex;
         justify-content:center;
       `
