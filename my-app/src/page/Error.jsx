@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import Header from '../components/Header';
-import ErrorComponent from '../components/ErrorComponent';
-import Footer from '../components/Footer';
+import Header from '../components/header/Header';
+import ErrorComponent from '../components/errorComponent/ErrorComponent';
+import Footer from '../components/footer/Footer';
 
 class Error extends Component {
   constructor(props){
@@ -12,7 +12,7 @@ class Error extends Component {
       
       return ( 
         <>
-        <Header lienSoul={""}/>
+        <Header lienSoul={"Home"}/>
         <ErrorComponent/>
         <Footer/></>          
     );

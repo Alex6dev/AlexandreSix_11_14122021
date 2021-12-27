@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import styled from 'styled-components';
-import Dropdown from './Dropdown';
+import Dropdown from '../dropdown/Dropdown';
+import './AboutComponent.css'
 
 let details= [
     {id:0, intitulé:"Fiabilité", text:"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
@@ -23,30 +23,17 @@ class About extends Component {
 
 
   render(){
-    const About=styled.section`
-        width: 100%;
-        display:flex;
-        margin:1rem 0 3rem 0;
-        flex-direction:column;
-        justify-content:space-around;
-        align-items:center;
-        
-    `
-    const AboutContainer=styled.div`
-        width:70%;
-    `
-    
-    
+   
     return ( 
 
-        <About>
+        <section className='About'>
             
             {details.map(elt=>
-                <AboutContainer key={elt.intitulé}>
+                <div className='AboutContainer' key={elt.intitulé}>
                     <Dropdown data={elt}/>
-                </AboutContainer>
+                </div>
             )}
-        </About>
+        </section>
         
     );
   }

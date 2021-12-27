@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import Header from '../components/Header';
-import Banner from '../components/Banner';
-import Gallery from '../components/Gallery';
-import Footer from '../components/Footer';
+import Header from '../components/header/Header';
+import Banner from '../components/banner/Banner';
+import Gallery from '../components/gallery/Gallery';
+import Footer from '../components/footer/Footer';
 
 class Home extends Component {
   constructor(){

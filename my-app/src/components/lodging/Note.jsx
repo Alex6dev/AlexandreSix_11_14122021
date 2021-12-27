@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import styled from 'styled-components';
 import starOff from '../../assets/starOff.png';
 import starOn from '../../assets/starOn.png';
+import './Note.css';
 
 
 class Note extends Component {
@@ -18,7 +18,7 @@ class Note extends Component {
     return ( 
         <div>
             
-        {counter.map((elt)=>this.props.rating>=elt ?(< img key={`${this.props.rating}-${elt}`} src={starOn}/>  ):(<img key={`${this.props.rating}-${elt}`} src={starOff}/>))}
+        {counter.map((elt)=>this.props.rating>=elt ?(< img key={`${this.props.rating}-${elt}`}className='note' src={starOn} />  ):(<img className='note' key={`${this.props.rating}-${elt}`} src={starOff}/>))}
         </div>
     );
   }

@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import Header from '../components/Header';
-import BannerAbout from '../components/BannerAbout';
-import AboutComponent from '../components/AboutComponent';
-import Footer from '../components/Footer';
+import Header from '../components/header/Header';
+import BannerAbout from '../components/bannerAbout/BannerAbout';
+import AboutComponent from '../components/aboutComponents/AboutComponent';
+import Footer from '../components/footer/Footer';
 
 class About extends Component {
   constructor(props){

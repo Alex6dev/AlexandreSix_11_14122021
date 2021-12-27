@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import styled from 'styled-components';
-import fleche from '../../assets/fleche.png'
+import fleche from '../../assets/fleche.png';
+import './GalleryLodging.css'
 
 class GalleryLodging extends Component {
   constructor(props){
@@ -45,41 +45,14 @@ class GalleryLodging extends Component {
   render(){
     
     
-    const Container=styled.div`
-      width:100%;
-      
-    `
-    const ArrowNext=styled.button`
-      transform:rotate(-90deg);
-      position:absolute;
-      top:23rem;
-      right:10%;
-      background-color:#ff6060;
-      border:none;
-      border-radius:5px;
-    `
-    const ArrowPrevious=styled.button`
-      transform:rotate(90deg);
-      position:absolute;
-      top:23rem;
-      left:10%;
-      background-color:#ff6060;
-      border:none;
-      border-radius:5px;
-    `
-    const Image=styled.img`
-      width:100%;
-      height:400px;
-      object-fit:cover;
-      color:#ff6060;
-    `
+    
     
     return ( 
-        <Container>
-          <ArrowPrevious onClick={()=>this.funcPicturePrevious()}><img src={fleche} alt="bouton photo précédente"/></ArrowPrevious>
-          <ArrowNext onClick={()=>this.funcPictureNext()}><img src={fleche} alt="bouton photo suivante"/></ArrowNext>
-          <Image src={this.state.images[this.state.currentImage]} />
-        </Container>
+        <div className='Container'>
+          <button className='Arrow ArrowPrevious' onClick={()=>this.funcPicturePrevious()}><img src={fleche} alt="bouton photo précédente"/></button>
+          <button className='Arrow ArrowNext' onClick={()=>this.funcPictureNext()}><img src={fleche} alt="bouton photo suivante"/></button>
+          <img className='Image' src={this.state.images[this.state.currentImage]} />
+        </div>
     );
   }
 

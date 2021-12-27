@@ -1,0 +1,27 @@
+.Footer{
+
+    width:100%;
+    height:210px;
+    background-color: rgba(0, 0, 0);
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.FooterContainer{
+    text-align:center;  
+}
+.FooterImg{
+
+    margin-top:3rem;
+}
+.FooterText{
+
+    font-size:24px;    
+    font-weight:500;
+    color:rgb(250,250,250);
+}
+@media screen and (max-width:599px) {
+    .FooterText{
+        font-size: 12px;
+    }
+}

@@ -1,9 +1,9 @@
 import { Component } from 'react';
-import styled from 'styled-components';
-import Dropdown from '../Dropdown';
+import Dropdown from '../dropdown/Dropdown';
 import GalleryLodging from './GalleryLodging';
 import Note from './Note';
 import Tag from './Tag';
+import './Lodging.css'
 var tab=[
   {
       "id": "c67ab8a7",
@@ -37,8 +37,8 @@ var tab=[
   }
 ]
 let tabDesEqui= [
-  { id:"a",intitulé:"Description ",text:tab[0].description},
-  { id:"n",intitulé:"Équipements", tags:tab[0].equipments}
+  { id:"a1",intitulé:"Description ",text:tab[0].description},
+  { id:"n3",intitulé:"Équipements", tags:tab[0].equipments}
 
 ]
 
@@ -70,127 +70,44 @@ class Lodging extends Component {
         )
   }
   render(){
-    const{id}= this.props.match.params
-    console.log(id)
+    //const{id}= this.props.match.params
+    //console.log(id)
     console.log("slt")
-      const LodgingContainer= styled.section`
-        display:flex;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:center;
-        margin-top:2rem;
-        padding:0 6rem;
-      `   
-      const LodgingContainGallery=styled.div`
-        width:100%;
-        height:450px;
-        display:flex;
-        justify-content:center;
-      `
-      const LodgingGallery=styled.img`
-        width:100%;
-        object-fit:cover;
-      `
-      const LodgingContainerDiv=styled.div`
-        width:100%;
-        display:flex;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:space-between;
-
-      `
-      const LodgingContainerTitle=styled.div` 
-
-      ` 
-      const LodgingContainerTitleText=styled.h1`
-        color:#ff6060;
-        font-weight:500;
-        font-size:36px;
-      `
-
-      const LodgingContainerTitleTextLocat=styled.p`
-        color:#ff6060;
-        font-weight:500;
-        font-size:18px;
-      `
-      const LodgingContainerTitleListTags=styled.ul`
-        display:flex;
-        padding:0;
-      `
-      const LodgingContainerNameNote=styled.div`
-        display:flex;
-        flex-direction:column;
-        margin-top:3rem;
-      `
-      const LodgingContainerName=styled.div`
-        display:flex;
-        flex-direction:row;
-      `
-      const LodgingContainerNameText=styled.p`
-        width:95px;
-        font-size:18px;
-        font-weight:500;
-        text-align:right;
-        color:#ff6060;
-        font-weight:500;
-        font-size:18px;
-        margin-right:2rem;
-
-      `
-      const LodgingContainerNameImg=styled.img`
-        border-radius: 4rem ;
-        width:64px;
-        height:64px;
-      ` 
-      const LodgingContainerNote=styled.div`
-      
-      ` 
-      const LodgingContainerDescripEquipe=styled.div`
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        width:99%;
-        margin-bottom:5rem;
-      `
-      const DropdownContainer=styled.div`
-        width:47%;
-      
-      `
-      
+     
       return ( 
-      <LodgingContainer>
-        <LodgingContainGallery>
+      <section className='LodgingContainer'>
+        <div className='LodgingContainGallery'>
           <GalleryLodging images={tab[0].pictures}/>
+        </div>
 
-        </LodgingContainGallery>
-        <LodgingContainerDiv>
-          <LodgingContainerTitle>
-            <LodgingContainerTitleText>
+        <div className='LodgingContainerDiv'>
+          <div className="LodgingContainerTitle">
+            <h1 className='LodgingContainerTitleText'>
               {tab[0].title}
-            </LodgingContainerTitleText>
-            <LodgingContainerTitleTextLocat>
+            </h1>
+            <p className='LodgingContainerTitleTextLocat'>
               {tab[0].location}
-            </LodgingContainerTitleTextLocat>
-            <LodgingContainerTitleListTags>
+            </p>
+            <ul className='LodgingContainerTitleListTags'>
               {tab[0].tags.map((elt)=>(<Tag tag={elt} id={tab[0].id} key={`${tab[0].id}-${elt}`}/>))}
-            </LodgingContainerTitleListTags>
-          </LodgingContainerTitle>
-          <LodgingContainerNameNote>
-            <LodgingContainerName>
-              <LodgingContainerNameText>
+            </ul>
+          </div>
+          <div className='LodgingContainerNameNote'>
+            <div className='LodgingContainerName'>
+              <p className='LodgingContainerNameText'>
                 {tab[0].host.name}
-              </LodgingContainerNameText>
-              <LodgingContainerNameImg src={tab[0].host.picture}/>
-            </LodgingContainerName>
-            <LodgingContainerNote>
+              </p>
+              <img className='LodgingContainerNameImg' src={tab[0].host.picture}/>
+            </div>
+            <div className='LodgingContainerNote'>
               <Note rating={tab[0].rating} id={tab[0].id}/>
-            </LodgingContainerNote>
-          </LodgingContainerNameNote>
-        </LodgingContainerDiv>
-        <LodgingContainerDescripEquipe>
-          {tabDesEqui.map((elt)=>(<DropdownContainer key={elt.id} ><Dropdown  data={elt}/></DropdownContainer>))}
-        </LodgingContainerDescripEquipe>
-      </LodgingContainer>                   
+            </div>
+          </div>
+        </div>
+        <div className='LodgingContainerDescripEquipe'>
+          {tabDesEqui.map((elt)=>(<div className='DropdownContainer' key={`${elt.id}-${elt.intitulé}`} ><Dropdown  data={elt}/></div>))}
+        </div>
+      </section>                   
     );
   }
 

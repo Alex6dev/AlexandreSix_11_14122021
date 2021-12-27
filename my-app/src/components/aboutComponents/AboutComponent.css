@@ -1,0 +1,21 @@
+.About{
+    width: 100%;
+    display:flex;
+    margin:1rem 0 3rem 0;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+.AboutContainer{
+    width:70%;    
+}
+@media screen and (max-width:599px) {
+    .About{
+        padding-left: 1.5rem;
+        align-items: flex-start;
+    }
+    .AboutContainer{
+        width: 85%;
+    }
+}
+

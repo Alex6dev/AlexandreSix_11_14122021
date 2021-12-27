@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import Lodging from '../components/lodging/Lodging';
 
 class Location extends Component {
@@ -9,8 +9,7 @@ class Location extends Component {
   }
 
   render(){
-      console.log("slt")
-      const{id}= this.props.match.params
+      //const{id}= this.props.match.params
 
       return ( 
       <>

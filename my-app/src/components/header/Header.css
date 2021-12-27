@@ -1,0 +1,34 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.HeaderImg{
+    margin: 3rem 0 2rem 5%;
+}  
+.HeaderNav{
+    display: flex;
+    flex-direction: row;
+    margin: 3.5rem 0 0 65% ;
+}
+.HeaderText{
+    color:#FF6060}
+.HeaderLien{
+    text-decoration: none;
+    margin-right: 4rem;
+}
+.HeaderTextSoul{
+    text-decoration: underline;
+    color: #FF6060;
+}
+@media screen and (max-width:599px) {
+    .HeaderImg{
+        width: 170px;
+    }
+    .HeaderNav{
+        margin: 3.5rem 0 0 1rem;
+    }
+    .HeaderLien{
+        margin-right: 2rem;
+    }
+}

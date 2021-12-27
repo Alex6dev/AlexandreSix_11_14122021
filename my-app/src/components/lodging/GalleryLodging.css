@@ -1,0 +1,38 @@
+.Container{
+    width:100%;
+
+}
+.Arrow{
+    position:absolute;
+    top:23rem;
+    background-color:#ff6060;
+    border:none;
+    border-radius:5px;
+}
+.ArrowNext{
+    transform:rotate(-90deg);
+    right:10%;    
+}
+.ArrowPrevious{
+    transform:rotate(90deg);
+    left:10%;
+}
+.Image{
+
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    color:#ff6060;
+}
+@media screen and (max-width:599px) {
+    .Container{
+        height: 260px;
+    }
+    .Image{
+        height: 260px;
+        border-radius: 10px;
+    }
+    .Arrow{
+        top: 16rem;
+    }
+}

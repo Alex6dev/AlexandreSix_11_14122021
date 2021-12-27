@@ -1,0 +1,40 @@
+.Error{
+    width: 100%;
+    height: 100%;  
+}
+.ErrorTextG{
+    color: #ff6060;
+    font-weight:700;
+    font-size:288px;
+    margin:0;
+    text-align:center;    
+}
+.ErrorText{
+    color: #ff6060;
+    font-weight:500;
+    font-size:36px;
+    text-align:center;    
+}
+.ErrorLien{
+    text-align:center;
+
+}
+.ErrorTextLien{
+    text-decoration: underline;
+    color: #FF6060;
+    margin:7rem 0 7rem 0 ;
+}
+@media screen and (max-width:599px) {
+    .ErrorTextG{
+        font-size: 96px;
+        margin-top: 2rem;
+    }
+    .ErrorText{
+        font-size: 22px;
+        width: 65%;
+        margin-left: 5rem;
+    }
+    .ErrorTextLien{
+        margin: 4.5rem 0 4.5rem 0 ;
+    }
+}
