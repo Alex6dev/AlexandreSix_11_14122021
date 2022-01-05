@@ -8,7 +8,7 @@ class Error extends Component {
       
       return ( 
         <>
-        <Header lienSoul={"Home"}/>
+        <Header lienSoul={""}/>
         <ErrorComponent/>
         <Footer/></>          
     );
