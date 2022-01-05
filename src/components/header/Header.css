@@ -23,12 +23,12 @@
 }
 @media screen and (max-width:599px) {
     .HeaderImg{
-        width: 170px;
+        width: 35%;
     }
     .HeaderNav{
         margin: 3.5rem 0 0 1rem;
     }
     .HeaderLien{
-        margin-right: 2rem;
+        margin-right: 0.5rem;
     }
 }

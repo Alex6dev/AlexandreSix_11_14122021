@@ -11,10 +11,9 @@ class Note extends Component {
     
 
     return ( 
-        <div>
-            
+        <>
         {counter.map((elt)=>this.props.rating>=elt ?(< img key={`${this.props.rating}-${elt}`}className='note' src={starOn} />  ):(<img className='note' key={`${this.props.rating}-${elt}`} src={starOff}/>))}
-        </div>
+        </>
     );
   }
 

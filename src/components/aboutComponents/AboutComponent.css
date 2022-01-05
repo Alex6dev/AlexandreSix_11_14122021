@@ -11,7 +11,7 @@
 }
 @media screen and (max-width:599px) {
     .About{
-        padding-left: 1.5rem;
+        padding-left:5%;
         align-items: flex-start;
     }
     .AboutContainer{

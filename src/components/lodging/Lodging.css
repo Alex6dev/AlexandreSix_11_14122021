@@ -97,8 +97,12 @@
         justify-content: space-between;
         margin-top: 1rem;
     }
+    .LodgingContainerNameText{
+        width: 40px;
+    }
     .LodgingContainerNote{
         padding-top: 1.5rem;
+        width: 50%;
     }
     .LodgingContainerDescripEquipe{
         flex-direction: column;
