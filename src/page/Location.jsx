@@ -33,7 +33,6 @@ class Location extends Component {
   }
   render(){
     const {isLoaded,dataId}=this.state
-    
     if(!isLoaded){
       return(<div><p>Chargement !</p></div>)
      
