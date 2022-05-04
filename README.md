@@ -21,7 +21,6 @@ Figma: [link to model](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Desi
 - Fetch
 - [React](https://fr.reactjs.org/)
 - [React Router](https://reactrouter.com/)
-- [React-Redux](https://redux.js.org/)
 
 ### 2-2 Launching the project
 
