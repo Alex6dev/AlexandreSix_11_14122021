@@ -2,7 +2,7 @@
   "homepage": "https://alex6dev.github.io/AlexandreSix_11_14122021/",
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
