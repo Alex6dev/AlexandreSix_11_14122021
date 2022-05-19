@@ -1,5 +1,5 @@
 {
-  "homepages": "https://alex6dev.github.io/AlexandreSix_11_14122021/",
+  "homepage": "https://alex6dev.github.io/AlexandreSix_11_14122021/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -16,8 +16,8 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -b master -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
